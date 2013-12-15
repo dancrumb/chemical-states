@@ -6,6 +6,7 @@
   "repository": "",
   "author": "Dan Rumney <dancrumb@gmail.com>",
   "dependencies": {
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "request": "~2.30.0"
   }
 }
