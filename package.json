@@ -1,10 +1,13 @@
 {
   "name": "chemical-states",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A utility to convert strings to chemical states",
   "main": "convert.js",
-  "repository": "",
+  "repository": "https://github.com/dancrumb/chemical-states",
   "author": "Dan Rumney <dancrumb@gmail.com>",
+  "engines": {
+    "node": "0.10.x"
+  }
   "dependencies": {
     "lodash": "~2.4.1",
     "request": "~2.30.0"
