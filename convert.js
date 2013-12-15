@@ -1,8 +1,9 @@
 (function (){
-    var _       = require("lodash"),
-        chemicals        = require("./chemicals.json"),
-        states           = require("./states.json"),
-        TEST             = "CHICAGO";
+    "use strict";
+    var _           = require("lodash"),
+        chemicals   = require("./chemicals.json"),
+        states      = require("./states.json"),
+        TEST        = "CHICAGO";
         
     function isValidGram(gram) {
         return chemicals[gram.toUpperCase()] || states[gram.toUpperCase()];
@@ -60,19 +61,14 @@
                     pendingSolutions.push(newSolution);
                 }
             }
-            if(initialGram.length <= 2) {
-            // Else
-                // Check the validity of the first gram. If it is valid, add this
-                // solution to the valid solutions list. IF not, dispose of it
-                if(isValidGram(initialGram)) {
-                    validSolutions.push(solution);
-                }
+            if(isCompleteSolution(solution)) {
+                validSolutions.push(solution);
             }
         }
         return validSolutions;
     }
         
-    var solutions = convert(TEST);        
+    var solutions = convert(TEST);
     console.log("Solutions:");
     _.forEach(solutions, function(solution) {
         console.log("\t", expandSolution(solution));
