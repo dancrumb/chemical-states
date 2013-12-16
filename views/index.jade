@@ -1,7 +1,26 @@
 extends layout
 block content
     p.
-        "Chemical States" is a pub trivia round that I. Just. Love. So much so, that I went full bore nerd on it and
-        wrote an web app all about them.
-    h2 What is "Chemical States"
+        "Chemical States" is a round in a pub trivia quiz that I. Just. Love. So much so, that I went full-bore nerd on 
+        it and wrote a web app all about them.
+    
+    h2 What is "Chemical States"?
     p.
+        The round is pretty straightforward. Each question in the round is a series of elements from the periodic table
+        or one of the 50 US states. By taking the symbol that represents the chemical or state and putting it with the
+        others, a word is built up.
+        br
+        For instance, consider:
+        .solution
+            span.symbol Carbon span.symbol Helium span.symbol Michigan span.symbol Carbon span.symbol Aluminum
+        
+        Converting these to their symbols, you get C, HE, MI, C, AL, or the word "Chemical".
+    
+    h2 So what's the webapp
+    p.
+        I found myself wondering how simple it would be to convert a word to a set of "Chemical States". This webapp
+        is the result of that wondering.
+    
+    #app
+        input#word
+        #solutions
