@@ -7,10 +7,12 @@
   "author": "Dan Rumney <dancrumb@gmail.com>",
   "engines": {
     "node": "0.10.x"
-  }
+  },
   "dependencies": {
     "lodash": "~2.4.1",
     "request": "~2.30.0",
-    "express": "~3.4.7"
+    "express": "~3.4.7",
+    "jade": "~0.35.0",
+    "less-middleware": "~0.1.14"
   }
 }
