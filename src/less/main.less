@@ -1,1 +1,28 @@
 @import "reset";
+
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+body {
+    padding: 10px;
+
+    .container {
+
+    }
+}
+
+.solution {
+    .rounded-corners(5px);
+    border: solid thin black;
+    background-color: #dcdce8;
+    .symbol {
+        .rounded-corners(10px);
+        padding-right: 5px;
+        background-color: #faa361;
+    }
+}
