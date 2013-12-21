@@ -1,19 +1,8 @@
 @import "reset";
-
-.rounded-corners (@radius: 5px) {
-  -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
-  -ms-border-radius: @radius;
-  -o-border-radius: @radius;
-  border-radius: @radius;
-}
+@import "mixins";
 
 body {
     padding: 10px;
-
-    .container {
-
-    }
 }
 
 .solution {
@@ -21,10 +10,25 @@ body {
     border: solid thin black;
     background-color: #dcdce8;
     padding: 5px;
+    margin-bottom: 5px;
+
     .symbol {
         display: inline-block;
         .rounded-corners(5px);
-        padding: 5px;
+        padding: 1px 10px;
+        margin-right: 7px;
         background-color: #faa361;
     }
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.error {
+    background-color: #FFCCCC;
+    border: solid thin #CC0000;
+    .rounded-corners(5px);
+    padding: 5px 10px;
+    color: black;
 }
